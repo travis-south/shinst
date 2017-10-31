@@ -1,0 +1,2 @@
+# shinst
+Shell installer

@@ -6,5 +6,5 @@ Shell installer for me.
 ### Ansible
 
 ```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible | sh
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible | sudo sh
 ```

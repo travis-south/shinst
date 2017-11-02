@@ -1,5 +1,5 @@
 # Shinst
-Shell installer for me.
+Shell installer for me. Tested only on Ubutn 17.04
 
 ## Usage
 
@@ -24,4 +24,9 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/gitp
 ### Daker
 ```shell
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker -o /usr/local/bin/daker && sudo chmod +x /usr/local/bin/daker
+```
+
+### Update Ubuntu packages
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 ```

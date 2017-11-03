@@ -1,44 +1,22 @@
-# Shinst
-Shell installer for me. Tested only on Ubutn 17.04
+#!/usr/bin/env bash
+set -e
 
-## Requirements
+command -v git >/dev/null 2>&1 || { echo >&2 "I require git.  Aborting."; exit 1; }
 
-1. `sudo` permissions
-1. Git
-
-## Usage
-
-### Install all
-
-```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/all | sudo sh
-```
-
-### Individual installation
-
-#### Ansible
-
-```shell
+printf "Installing Ansible\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible | sudo sh
-```
-
-#### Docker
-
-```shell
+printf "Installing Docker\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/docker | sudo sh
-```
-
-#### Git Prune
-```shell
+printf "Installing gitprune\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/gitprune -o /usr/local/bin/gitprune && sudo chmod +x /usr/local/bin/gitprune
-```
-
-#### Daker
-```shell
+printf "Installing daker\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker -o /usr/local/bin/daker && sudo chmod +x /usr/local/bin/daker
-```
-
-#### Update Ubuntu packages
-```shell
+printf "Installing update software\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
-```
+
+printf "Setting up machine\n"
+rm -rf ansible-playbook-setup-machine
+git clone https://github.com/travis-south/ansible-playbook-setup-machine.git
+cd ansible-playbook-setup-machine
+ansible-galaxy install -r requirements.yml
+ansible-playbook main.yml -i inventory -K

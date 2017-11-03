@@ -11,7 +11,7 @@ Shell installer for me. Tested only on Ubutn 17.04
 ### Install all
 
 ```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/all | sudo sh
+curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/all | sh
 ```
 
 ### Individual installation

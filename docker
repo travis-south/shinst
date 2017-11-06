@@ -21,5 +21,6 @@ DOCKER_COMPOSE_FINAL_URL="$DOCKER_COMPOSER_LATEST/docker-compose-$(uname -s)-$(u
 printf "$DOCKER_COMPOSE_FINAL_URL\n"
 curl -L $DOCKER_COMPOSE_FINAL_URL -o /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
+usermod -aG docker $USER
 docker --version
 docker-compose --version

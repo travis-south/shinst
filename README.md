@@ -11,7 +11,7 @@ Shell installer for me. Tested only on Ubutn 17.04
 ### Install all
 
 ```shell
-curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/all?no_cache=$RANDOM | sh
+bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/all?no_cache=$RANDOM)
 ```
 
 ### Individual installation
@@ -19,13 +19,13 @@ curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/all?no_ca
 #### Ansible
 
 ```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible?no_cache=$RANDOM | sudo sh
+sudo bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/ansible?no_cache=$RANDOM)
 ```
 
 #### Docker
 
 ```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/docker?no_cache=$RANDOM | sudo sh
+sudo bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/docker?no_cache=$RANDOM)
 ```
 
 #### Git Prune

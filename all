@@ -4,15 +4,15 @@ set -e
 command -v git >/dev/null 2>&1 || { echo >&2 "I require git.  Aborting."; exit 1; }
 
 printf "Installing Ansible\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible | sudo sh
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ansible?no_cache=$RANDOM | sudo sh
 printf "Installing Docker\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/docker | sudo sh
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/docker?no_cache=$RANDOM | sudo sh
 printf "Installing gitprune\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/gitprune -o /usr/local/bin/gitprune && sudo chmod +x /usr/local/bin/gitprune
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/gitprune?no_cache=$RANDOM -o /usr/local/bin/gitprune && sudo chmod +x /usr/local/bin/gitprune
 printf "Installing daker\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker -o /usr/local/bin/daker && sudo chmod +x /usr/local/bin/daker
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker?no_cache=$RANDOM -o /usr/local/bin/daker && sudo chmod +x /usr/local/bin/daker
 printf "Installing update software\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 
 printf "Setting up machine\n"
 rm -rf ansible-playbook-setup-machine

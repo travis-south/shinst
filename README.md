@@ -38,6 +38,16 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/gitp
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker?no_cache=$RANDOM -o /usr/local/bin/daker && sudo chmod +x /usr/local/bin/daker
 ```
 
+#### Daker Composer
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_c?no_cache=$RANDOM -o /usr/local/bin/daker_c && sudo chmod +x /usr/local/bin/daker_c
+```
+
+#### Daker PHPQATools
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_p?no_cache=$RANDOM -o /usr/local/bin/daker_p && sudo chmod +x /usr/local/bin/daker_p
+```
+
 #### Update Ubuntu packages
 ```shell
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software

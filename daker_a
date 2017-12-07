@@ -6,4 +6,5 @@ command -v daker >/dev/null 2>&1 || { echo >&2 "I require daker but it's not ins
 
 docker pull php:7-apache
 
-docker run -d -p 8080:80 --name php-app -v "$PWD/public":/var/www/html php:7-apache
+docker run -d -p 8080:80 --name php-app -v "$PWD":/app php:7-apache
+docker exec -ti php-app ln -fns /var/www/html /app/public

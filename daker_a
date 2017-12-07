@@ -4,6 +4,6 @@ set -e
 
 command -v daker >/dev/null 2>&1 || { echo >&2 "I require daker but it's not installed.  Aborting."; exit 1; }
 
-docker pull travissouth/phpqatools
+docker pull php:7-apache
 
-docker run -d -p 8080:80 -v "$PWD":/var/www/html php:7-apache
+docker run -d -p 8080:80 --name php-app -v "$PWD/public":/var/www/html php:7-apache

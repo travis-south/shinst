@@ -6,4 +6,4 @@ command -v daker >/dev/null 2>&1 || { echo >&2 "I require daker but it's not ins
 
 docker pull travissouth/phpqatools
 
-daker -p 8080:8080 travissouth/phpqatools $@
+daker travissouth/phpqatools $@

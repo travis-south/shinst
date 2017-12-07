@@ -48,6 +48,11 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/dake
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_p?no_cache=$RANDOM -o /usr/local/bin/daker_p && sudo chmod +x /usr/local/bin/daker_p
 ```
 
+#### Daker with Apache
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_a?no_cache=$RANDOM -o /usr/local/bin/daker_a && sudo chmod +x /usr/local/bin/daker_a
+```
+
 #### Update Ubuntu packages
 ```shell
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software

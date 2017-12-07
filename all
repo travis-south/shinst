@@ -15,6 +15,8 @@ printf "Installing daker composer\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_c?no_cache=$RANDOM -o /usr/local/bin/daker_c && sudo chmod +x /usr/local/bin/daker_c
 printf "Installing daker phpqatools\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_p?no_cache=$RANDOM -o /usr/local/bin/daker_p && sudo chmod +x /usr/local/bin/daker_p
+printf "Installing daker with apache\n"
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/daker_a?no_cache=$RANDOM -o /usr/local/bin/daker_a && sudo chmod +x /usr/local/bin/daker_a
 printf "Installing update software\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 

@@ -2,8 +2,10 @@
 
 set -e
 
+APP_ENV=${APP_ENV=-"dev"}
+
 command -v daker >/dev/null 2>&1 || { echo >&2 "I require daker but it's not installed.  Aborting."; exit 1; }
 
 docker pull travissouth/composer
 
-daker travissouth/composer $@
+daker --env APP_ENV=$APP_ENV travissouth/composer $@

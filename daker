@@ -16,6 +16,6 @@ rm -rf $HOME/.docker-temp-ssh/config
 eval $(ssh-agent) > /dev/null
 ssh-add <(cat $HOME/.docker-temp-ssh/id_rsa)
 
-docker run $MODE -ti -v $(pwd):/app -v $(pwd):/var/www/html/app -v $SSH_AUTH_SOCK:/ssh-auth.sock -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/.docker-temp-ssh:/home/$USER/.ssh:ro -v $HOME/.cache/composer:/tmp/cache --user $(id -u):$(id -g) --env SSH_AUTH_SOCK=/ssh-auth.sock $@
+docker run $MODE -ti -v $(pwd):/app -v $(pwd):/var/www/html/app -v $SSH_AUTH_SOCK:/ssh-auth.sock -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/.docker-temp-ssh:/home/$USER/.ssh:ro -v $HOME/.cache/composer:/tmp/cache --user $(id -u):$(id -g) --env SSH_AUTH_SOCK=/ssh-auth.sock --env APP_ENV=prod $@
 
 # docker run -d -p 8080:80 --name php-app -v "$PWD":/var/www/html php:7.1.8-apache

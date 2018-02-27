@@ -10,7 +10,7 @@ mkdir -p $HOME/.cache/composer
 chmod -R 777 $HOME/.cache/composer
 
 rm -rf $HOME/.docker-temp-ssh
-cp -dpR $HOME/.ssh $HOME/.docker-temp-ssh
+cp -pR $HOME/.ssh $HOME/.docker-temp-ssh
 rm -rf $HOME/.docker-temp-ssh/config
 
 eval $(ssh-agent) > /dev/null

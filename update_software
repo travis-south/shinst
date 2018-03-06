@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt auto-remove -y

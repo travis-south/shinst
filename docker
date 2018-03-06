@@ -14,9 +14,9 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get install docker-ce -y
-DOCKER_COMPOSER_CURL="$(sudo curl -I https://github.com/docker/compose/releases/latest | sudo perl -n -e '/^Location: (.*)$/ && sudo print "$1\n"' | sudo tr -d '\r')"
+DOCKER_COMPOSER_CURL="$(curl -I https://github.com/docker/compose/releases/latest | perl -n -e '/^Location: (.*)$/ && print "$1\n"' | tr -d '\r')"
 printf "$DOCKER_COMPOSER_CURL\n"
-DOCKER_COMPOSER_LATEST=$(sudo echo $DOCKER_COMPOSER_CURL | sudo sed "s/tag/download/g")
+DOCKER_COMPOSER_LATEST=$(echo $DOCKER_COMPOSER_CURL | sed "s/tag/download/g")
 printf "$DOCKER_COMPOSER_LATEST\n"
 DOCKER_COMPOSE_FINAL_URL="$DOCKER_COMPOSER_LATEST/docker-compose-$(uname -s)-$(uname -m)"
 printf "$DOCKER_COMPOSE_FINAL_URL\n"

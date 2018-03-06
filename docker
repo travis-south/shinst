@@ -1,27 +1,27 @@
 #!/usr/bin/env bash
-set -e
-apt-get update
-apt-get install \
+
+sudo apt-get update
+sudo apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
     software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-apt-key fingerprint 0EBFCD88
-add-apt-repository \
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
-apt-get update
-apt-get install docker-ce -y
-DOCKER_COMPOSER_CURL="$(curl -I https://github.com/docker/compose/releases/latest | perl -n -e '/^Location: (.*)$/ && print "$1\n"' | tr -d '\r')"
+sudo apt-get update
+sudo apt-get install docker-ce -y
+DOCKER_COMPOSER_CURL="$(sudo curl -I https://github.com/docker/compose/releases/latest | sudo perl -n -e '/^Location: (.*)$/ && sudo print "$1\n"' | sudo tr -d '\r')"
 printf "$DOCKER_COMPOSER_CURL\n"
-DOCKER_COMPOSER_LATEST=$(echo $DOCKER_COMPOSER_CURL | sed "s/tag/download/g")
+DOCKER_COMPOSER_LATEST=$(sudo echo $DOCKER_COMPOSER_CURL | sudo sed "s/tag/download/g")
 printf "$DOCKER_COMPOSER_LATEST\n"
 DOCKER_COMPOSE_FINAL_URL="$DOCKER_COMPOSER_LATEST/docker-compose-$(uname -s)-$(uname -m)"
 printf "$DOCKER_COMPOSE_FINAL_URL\n"
-curl -L $DOCKER_COMPOSE_FINAL_URL -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-usermod -aG docker $USER
-docker --version
-docker-compose --version
+sudo curl -L $DOCKER_COMPOSE_FINAL_URL -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo usermod -aG docker $USER
+sudo docker --version
+sudo docker-compose --version

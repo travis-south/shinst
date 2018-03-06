@@ -19,13 +19,13 @@ bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/all?no_
 #### Ansible
 
 ```shell
-sudo bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/ansible?no_cache=$RANDOM)
+bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/ansible?no_cache=$RANDOM)
 ```
 
 #### Docker
 
 ```shell
-sudo bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/docker?no_cache=$RANDOM)
+bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/docker?no_cache=$RANDOM)
 ```
 
 #### Git Prune

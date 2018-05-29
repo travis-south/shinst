@@ -57,3 +57,8 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/dake
 ```shell
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 ```
+
+#### Docker Workspace
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ws?no_cache=$RANDOM -o /usr/local/bin/ws && sudo chmod +x /usr/local/bin/ws
+```

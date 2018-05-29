@@ -52,6 +52,9 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/dake
 printf "Installing update software\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 
+printf "Installing docker-workspace\n"
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ws?no_cache=$RANDOM -o /usr/local/bin/ws && sudo chmod +x /usr/local/bin/ws
+
 printf "Setting up machine\n"
 rm -rf ansible-playbook-setup-machine
 git clone https://github.com/travis-south/ansible-playbook-setup-machine.git

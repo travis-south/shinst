@@ -20,6 +20,8 @@ docker run --rm -ti \
     -v $(pwd):/var/www/app \
     -v $HOME/.ssh:/home/daker/.ssh \
     -v $HOME/.docker-workspace:/home/daker/.docker-workspace \
+    -v $(pwd):$(pwd) \
+    -w $(pwd) \
     $docker_sock_volume \
     --env PGID=$(id -g) --env PUID=$(id -u) \
     travissouth/workspace $@

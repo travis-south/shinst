@@ -32,6 +32,14 @@ set -e
 #EOF
 #    exit 1
 #esac
+# TODO:
+# Install curl
+# Install git
+# Install sublime text 3
+# Install spotify
+# Install google chrome
+# Install dropbox
+# Install skype
 
 command -v git >/dev/null 2>&1 || { echo >&2 "I require git.  Aborting."; exit 1; }
 

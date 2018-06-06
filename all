@@ -40,6 +40,7 @@ set -e
 # Install google chrome
 # Install dropbox
 # Install skype
+# Updated daemon.json with dns and insecure registries
 
 command -v git >/dev/null 2>&1 || { echo >&2 "I require git.  Aborting."; exit 1; }
 

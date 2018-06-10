@@ -41,6 +41,7 @@ set -e
 # Install dropbox
 # Install skype
 # Updated daemon.json with dns and insecure registries
+# Install docker-sync
 
 command -v git >/dev/null 2>&1 || { echo >&2 "I require git.  Aborting."; exit 1; }
 

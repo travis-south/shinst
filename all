@@ -63,7 +63,7 @@ printf "Installing update software\n"
 sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/update_software?no_cache=$RANDOM -o /usr/local/bin/update_software && sudo chmod +x /usr/local/bin/update_software
 
 printf "Installing docker-workspace\n"
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ws?no_cache=$RANDOM -o /usr/local/bin/ws && sudo chmod +x /usr/local/bin/ws
+bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/master/install?no_cache=$RANDOM)
 
 printf "Setting up machine\n"
 rm -rf ansible-playbook-setup-machine

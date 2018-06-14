@@ -1,20 +1,43 @@
 #!/usr/bin/env bash
 set -e
 
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+neutral='\033[0m'
+
+printf ${neutral}"Starting installation\n"
+
 # perform some very rudimentary platform detection
-#case "$(uname)" in
-#  Linux)
-#    $sh_c "$curl /tmp/fn_linux $url/$version/fn_linux"
-#    $sh_c "mv /tmp/fn_linux /usr/local/bin/fn"
-#    $sh_c "chmod +x /usr/local/bin/fn"
-#    fn --version
-#    ;;
-#  Darwin)
-#    $sh_c "$curl /tmp/fn_mac $url/$version/fn_mac"
-#    $sh_c "mv /tmp/fn_mac /usr/local/bin/fn"
-#    $sh_c "chmod +x /usr/local/bin/fn"
-#    fn --version
-#    ;;
+case "$(uname)" in
+	Linux)
+		printf ${yellow}"TODO: Ubuntu installation\n"
+		;;
+	Darwin)
+		printf ${green}"Installing brew\n"
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		
+		if ! command -v git >/dev/null 2>&1 
+		then
+			printf ${green}"Installing git via brew\n"
+			brew install git
+		fi
+
+		if ! command -v python >/dev/null 2>&1 
+		then
+			printf ${green}"Installing python via brew\n"
+			brew install python
+		fi
+
+		if ! command -v ansible >/dev/null 2>&1 
+		then
+			printf ${green}"Installing ansible via brew\n"
+			sudo pip install ansible
+		fi
+		;;
+esac
+
+exit 0
 #  WindowsNT)
 #    $sh_c "$curl $url/$version/fn.exe"
 #    # TODO how to make executable? chmod? how to do tmp file and move?

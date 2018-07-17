@@ -60,5 +60,5 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/upda
 
 #### Docker Workspace
 ```shell
-sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/ws?no_cache=$RANDOM -o /usr/local/bin/ws && sudo chmod +x /usr/local/bin/ws
+bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/master/install?no_cache=$RANDOM)
 ```

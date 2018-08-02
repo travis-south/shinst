@@ -62,3 +62,8 @@ sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/upda
 ```shell
 bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/master/install?no_cache=$RANDOM)
 ```
+
+#### Installing basic stuff on my Ubuntu box
+```shell
+bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/ubuntu-installer?no_cache=$RANDOM)
+```

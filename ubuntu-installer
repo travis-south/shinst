@@ -25,3 +25,5 @@ sudo usermod -aG docker $USER
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/master/install?no_cache=$RANDOM)
+gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true

@@ -27,3 +27,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/master/install?no_cache=$RANDOM)
 gsettings set org.gnome.desktop.lockdown disable-lock-screen true
 gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+sudo sysctl -w fs.inotify.max_user_watches=819200

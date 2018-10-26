@@ -67,3 +67,8 @@ bash <(curl https://raw.githubusercontent.com/travis-south/docker-workspace/mast
 ```shell
 bash <(curl https://raw.githubusercontent.com/travis-south/shinst/master/ubuntu-installer?no_cache=$RANDOM)
 ```
+
+#### Docker Compose
+```shell
+sudo curl -LSs https://raw.githubusercontent.com/travis-south/shinst/master/doc?no_cache=$RANDOM -o /usr/local/bin/doc && sudo chmod +x /usr/local/bin/doc
+```

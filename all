@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# perform some very rudimentary platform detection
+## perform some very rudimentary platform detection
 #case "$(uname)" in
 #  Linux)
 #    $sh_c "$curl /tmp/fn_linux $url/$version/fn_linux"

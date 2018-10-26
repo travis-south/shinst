@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e
+
+APP_ENV=${APP_ENV:-""}
+
+DOCKER_APP_ENV=""
+
+if [ "$APP_ENV" != "" ]
+then
+    DOCKER_APP_ENV="--env APP_ENV=$APP_ENV"
+fi
+
+docker-compose $DOCKER_APP_ENV $@
